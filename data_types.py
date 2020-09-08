@@ -33,12 +33,12 @@ class Configuration:
         return words    
         
     def show_info(self):
-        print ""
+        print("")
         for key in vars(self):
             val = getattr(self, key)
             if not isinstance(val, dict):
-                print "  %s:" % (self.title(key)) + " "*(20 - len(key)) + "%s" % (val)
-        print ""
+                print("  %s:" % (self.title(key)) + " "*(20 - len(key)) + "%s" % (val))
+        print("")
         
 
 class Element:
@@ -158,7 +158,7 @@ class FunctionAttributes:
         return self
         
     def display(self):
-        print json.dumps(self.toDict(), indent=2)
+        print(json.dumps(self.toDict(), indent=2))
         
     def toDict(self):
         dict = {}

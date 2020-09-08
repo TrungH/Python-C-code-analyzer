@@ -94,7 +94,7 @@ class GenCallGraph:
         with open(call_json) as dbf:
             db = json.load(dbf)
             
-        for func, call_cover in db.iteritems():
+        for func, call_cover in db.items():
             node = Node(name=func)
             node.shape = "box"
             
@@ -129,7 +129,7 @@ class GenCallGraph:
         
 def test():
     from random import randint
-    diggraph = DigGraph(name="Test Graphviz")
+    diggraph = DigGraph(label="Test Graphviz")
     
     for i in range(0, 10):
         node = Node("Node_%d" %(i))
@@ -153,7 +153,7 @@ def test():
         edge.shape=""
         diggraph.add_edge(edge)
         
-    print diggraph.to_dot()
+    print( diggraph.to_dot())
     
 if __name__ == "__main__":
     test()

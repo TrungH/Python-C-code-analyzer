@@ -140,7 +140,7 @@ class StructUnionParser:
         
     def info(self):
         print( "====================================================")
-        print "Struct/Union parser"
+        print( "Struct/Union parser")
         print( "====================================================")
         
     
@@ -886,7 +886,7 @@ class FunctionAnalyzer:
             info("Analyzing file ... " + f)
             self.process(f)
             
-        for func, func_attr in self.fmea_db.iteritems():
+        for func, func_attr in self.fmea_db.items():
             with open(func_attr["FilePath"]) as input:
                 c = input.read()
                 (section_list, none_section) = CriticalSection().list(c)
@@ -1084,7 +1084,7 @@ def done_info(config):
     print("  Wish you a lucky day ^.@ !")
     
 def luck():
-    print LUCKY
+    print(LUCKY)
     
 from graphviz import *
 

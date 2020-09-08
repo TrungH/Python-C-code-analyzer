@@ -9,15 +9,15 @@ from collections import OrderedDict
 
 def plenty_info(msg):
     if PLENTY_INFO:
-        print "  [I] " + msg
+        print( "  [I] " + msg)
         
 def info(msg):
     if INFO:
-        print "  [I] " + msg
+        print ("  [I] " + msg)
         
 def debug(msg):
     if DEBUG:
-        print "  [D] " + msg
+        print ("  [D] " + msg)
 
 #function to sort a nested dictionary:
 #Example:
